@@ -2,9 +2,9 @@
 :root {
   --main-color: #25271e;
   --secondary-color: #b15d19;
-  --side-info-color: #d8c358;
+  --side-info-color: #fdec2f;
   --highlight-color: #6d0839;
-  --bg-color: #fbeff4;
+  --bg-color: #fbf6dc;
 }
 
 body {
@@ -14,7 +14,7 @@ body {
 }
 
 * {
-  font-family: 'PT Sans', sans-serif;
+  font-family: "PT Sans", sans-serif;
   box-sizing: border-box;
   /*font-family: 'Merriweather', serif;*/
 }
@@ -40,8 +40,13 @@ p {
 .highlight {
   color: var(--highlight-color);
   font-weight: bold;
+  font-variant-caps: small-caps;
+  text-decoration: underline;
 }
-
+._name._stress {
+  font-size: 2.5em;
+  font-family: "Russo One", sans-serif;
+}
 /*-- Buttons --*/
 button {
   border: none;
@@ -49,14 +54,13 @@ button {
 
 .button {
   min-width: 200px;
-  box-shadow: 0px 0px 12px #555202d0;
+  box-shadow: 3px 4px 12px #837e00;
   background: #ffc439;
   text-align: center;
-  padding: 10px;
+  padding: 10px 20px;
   align-self: center;
   border-radius: 20px;
   font-weight: bold;
-  margin: 0 10px;
   cursor: pointer;
   user-select: none;
   color: var(--highlight-color);
@@ -66,12 +70,11 @@ button:focus {
   outline: none;
 }
 
+
 /*-- Header --*/
-.header__name._stress {
-  font-family: "Russo One", sans-serif;
+.header__name {
   display: inline-block;
   align-self: center;
-  font-size: 2.5em;
 }
 
 ._stress::first-letter {
@@ -108,18 +111,27 @@ button:focus {
   min-height: 700px;
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 0 10px;
 }
 
 .section-content {
   max-width: 1000px;
-  margin: 0 auto;
+  min-height: 600px;
   font-size: 130%;
 }
 
 /*-- First Block --*/
 .first_block {
-  background: #fffff9;
+ /* background: url(branch.png) right top / 300px repeat-x,
+    radial-gradient(
+      ellipse at center,
+      #e9ff00 1%,
+      #cec329 42%,
+      #e2dd2f 72%,
+      #d8c358 100%
+    );*/
+    background: linear-gradient(to bottom, #efed98 0%, #fed89e 100%); 
 }
 
 .first-block__content {
@@ -140,9 +152,8 @@ button:focus {
 
 /*-- Second Block --*/
 .second-block {
-  background: url("branch.png") right top / 300px repeat-x,  #f1f3d3;
-  border-bottom:2px solid #c6f8c5;
-  /*#*/
+  background: linear-gradient(to bottom, #ffc875 0%, #dbd8cb 83%, #f2f2f2 100%),
+    #dfd396;
 }
 
 .second-block__header {
@@ -163,8 +174,9 @@ button:focus {
   max-width: 400px;
   display: inline-block;
   padding: 20px 15px;
-  box-shadow: 3px 4px 10px 3px #c7fcc6cc;
-  border: 3px solid #c7fcc6cc;
+  box-shadow: 4px 4px 0px 0px #e3bf87;
+  border-radius: 20px;
+  background: #fad49b;
 }
 
 .contact-form-description {
@@ -179,6 +191,7 @@ button:focus {
 
 .input {
   margin-top: 5px;
+  line-height: 1.5;
   width: 95%;
   padding: 5px 10px;
   border-radius: 20px;
@@ -197,12 +210,188 @@ button:focus {
 }
 
 /*-- Assortment block --*/
+.assortment-block {
+  background: url("smoke.png") center bottom / 700px no-repeat, #e3b77e;
+}
 .assortment-list {
   display: grid;
   list-style: none;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  grid-gap: 5px 10px;
-
+  grid-gap: 100px;
+}
+.assortment__header {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+}
+.assortment-list__item {
+  padding: 10px;
+  background: #fff;
 }
 .assortment-list__card {
+  background: #fff;
+  border: 2px dashed #4d3003;
+  padding: 15px;
+  height: 100%;
+  position: relative;
+}
+
+.assortment-list__card-head__img {
+  max-width: 250px;
+  max-height: 250px;
+}
+.assortment-list__card-head__caption {
+  text-align: center;
+  padding: 2px;
+  font-size: 110%;
+}
+
+.assortment-list__card-info {
+  font-size: 75%;
+  color: #33230c;
+  font-family: "Raleway", sans-serif;
+}
+.assortment-list__card-head {
+  margin: 0;
+  display: flex;
+  object-fit: contain;
+  align-items: center;
+}
+
+/*-- three steps block --*/
+.three-steps-block {
+  background: url("repeat-pot-orig.png");
+}
+
+.three-steps-block__content {
+  background: #faebd7f0;
+  padding: 25px 50px;
+  border-radius: 50px;
+}
+.three-steps-block__content-caption {
+  text-shadow: 3px 3px 2px black, 0 0 1em #faebd7c7;
+  color: #edbf12;
+  font-size: 200%;
+  color: white;
+  text-align: center;
+}
+
+._rainbow {
+  animation: rainbow 1s infinite;
+}
+
+@keyframes rainbow {
+  0% {
+    color: lightblue;
+  }
+  30% {
+    color: blue;
+  }
+  100% {
+    color: lightblue;
+  }
+}
+
+.three-steps-block__content-step {
+  font-size: 120%;
+  font-weight: bold;
+  color: #5d0e01;
+  font-family: "Raleway", sans-serif;
+  padding: 30px 0;
+}
+.three-steps-block__content-step._second {
+  margin: 0 auto;
+  max-width: 500px;
+}
+.three-steps-block__content-step._third {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  margin: 0 0px -40px -5px;
+  background: white;
+  border: 2px solid white;
+  border-radius: 25px;
+  padding: 10px;
+  display: inline-block;
+  transform: rotate(45deg);
+}
+
+._first .icon {
+  border-top: 2px solid #1dc943;
+}
+._second .icon {
+  border-right: 2px solid #1dc943;
+  border-top: 2px solid #1dc943;
+
+}
+._third .icon {
+  border: 2px solid #1dc943;
+}
+
+.icon img {
+  width: 30px;
+  height: 30px;
+  transform: rotate(-45deg);
+}
+
+/*-- feedback --*/
+.feedback__entry-outer {
+  background: #fff;
+  padding: 15px;
+}
+.feedback__entry {
+  display: none;
+  background: #fff;
+  border: 2px dashed #4d3003;
+  padding: 15px;
+  min-height: 360px;
+}
+.feedback__entry__image {
+  display: inline-block;
+  align-self: flex-start;
+  width: 250px;
+  flex-shrink: 0;
+  padding: 30px;
+  margin: 0 20px 0 0;
+}
+.feedback__entry__name {
+  font-weight: bold;
+}
+.feedback__title {
+  text-align: center;
+  font-size: 200%;
+  font-weight: bold;
+}
+.feedback__buttons {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+.feedback__buttons .button {
+  margin: 0 10px;
+}
+/*-- footer --*/
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  background-color: var(--side-info-color);
+  padding: 15px;
+}
+.footer {
+  display: inline-block;
+}
+.footer__left__name,
+.footer__left__address,
+.footer__right__button,
+.footer__right__quest  {
+  display: inline-block;
+  padding-right: 10px; 
+
 }
