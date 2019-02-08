@@ -23,9 +23,9 @@ p {
 }
 @media screen and (max-width: 800px) {
   * {
-    font-size: 1.1em;
+    font-size: 1.3em;
   }
-}
+} 
 
 @media screen and (min-width: 800px) {
   * {
@@ -79,7 +79,7 @@ button:focus {
 
 ._stress::first-letter {
   color: var(--highlight-color);
-  font-size: 120%;
+  font-size: 1.4em;
   font-weight: bold;
 }
 
@@ -118,7 +118,7 @@ button:focus {
 .section-content {
   max-width: 1000px;
   min-height: 600px;
-  font-size: 130%;
+  font-size: 1.3em;
 }
 
 /*-- First Block --*/
@@ -181,7 +181,7 @@ button:focus {
 
 .contact-form-description {
   color: var(--secondary-color);
-  font-size: 60%;
+  font-size: 0.9em;
   font-style: italic;
 }
 
@@ -244,11 +244,11 @@ button:focus {
 .assortment-list__card-head__caption {
   text-align: center;
   padding: 2px;
-  font-size: 110%;
+  font-size: 1.1em;
 }
 
 .assortment-list__card-info {
-  font-size: 75%;
+  font-size: 0.9em;
   color: #33230c;
   font-family: "Raleway", sans-serif;
 }
@@ -272,7 +272,7 @@ button:focus {
 .three-steps-block__content-caption {
   text-shadow: 3px 3px 2px black, 0 0 1em #faebd7c7;
   color: #edbf12;
-  font-size: 200%;
+  font-size: 2em;
   color: white;
   text-align: center;
 }
@@ -294,7 +294,7 @@ button:focus {
 }
 
 .three-steps-block__content-step {
-  font-size: 120%;
+  font-size: 1.2em;
   font-weight: bold;
   color: #5d0e01;
   font-family: "Raleway", sans-serif;
@@ -308,6 +308,10 @@ button:focus {
   display: flex;
   align-items: flex-end;
   flex-direction: column;
+}
+
+.three-steps-block__content-step._third span {
+  font-size: 2em;
 }
 
 .icon {
@@ -365,7 +369,7 @@ button:focus {
 }
 .feedback__title {
   text-align: center;
-  font-size: 200%;
+  font-size: 2em;
   font-weight: bold;
 }
 .feedback__buttons {
